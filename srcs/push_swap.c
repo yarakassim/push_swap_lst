@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:50:12 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/04 17:08:46 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/04 23:03:51 by yarakassim       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int sort_args(int ac, char **av)
 {
 	int		i;
-	t_lst	*A;
+	t_stack	*A;
 
 	i = 0;
 	if (ac > 1)
