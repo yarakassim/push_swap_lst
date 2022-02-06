@@ -6,7 +6,7 @@
 /*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:50:12 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/04 23:03:51 by yarakassim       ###   ########.fr       */
+/*   Updated: 2022/02/06 21:55:57 by yarakassim       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	fill_stack(t_stack **A, int num)
 	}
 }
 
-t_lst	*lst_create(int num)
+t_stack	*lst_create(int num)
 {
 	
 }
