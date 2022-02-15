@@ -15,14 +15,15 @@
 int sort_args(int ac, char **av)
 {
 	int		i;
-	t_stack	*A;
+	t_lst	*A;
 
 	i = 0;
+	A = NULL;
 	if (ac > 1)
 	{
-		A = (t_stack *)malloc(sizeof(t_stack));
-		if (!A)
-			return (0);
+		// A = (t_lst *)malloc(sizeof(t_lst));
+		// if (!A)
+		// 	return (0);
 		while (av[++i])
 		{
 			if (!fill_stack(&A, ft_atoi(av[i])))
@@ -40,32 +41,33 @@ int sort_args(int ac, char **av)
 	return (1);
 }
 
-int	fill_stack(t_stack **A, int num)
+int	fill_stack(t_lst **A, int num)
 {
-	t_node *tmp;
-	t_node *end;
+	t_lst *tmp;
+	t_lst *end;
 
-	if (!((*A)->head))
+	if ((*A) == NULL)
 	{
-		(*A)->head = lst_create(num);
+		(*A) = lst_create(num);
 	}
 	else
 	{
-		tmp = (*A)->head;
-		while ((*A)->head->next != NULL)
-			(*A)->head = (*A)->head->next;
+		tmp = (*A);
+		while ((*A)->next != NULL)
+			(*A) = (*A)->next;
 		end = lst_create(num);
-		(*A)->head->next = end;
-		(*A)->head = tmp;
+		(*A)->next = end;
+		(*A) = tmp;
 	}
 	return (1);
 }
 
-t_node	*lst_create(int num)
+t_lst	*lst_create(int num)
 {
-	t_node	*new;
+	t_lst	*new;
 
-	new = (t_node *)malloc(sizeof(t_node));
+	//write(0, "here\n", 5);
+	new = (t_lst *)malloc(sizeof(t_lst));
 	if (!new)
 		return (NULL);
 	new->element = num;

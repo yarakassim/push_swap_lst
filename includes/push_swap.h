@@ -19,16 +19,12 @@
 
 #include <stdio.h>
 
-typedef struct s_node
+typedef struct s_lst
 {
 	int				element;
-	struct s_node 	*next;
-}							t_node;
+	struct s_lst 	*next;
+}							t_lst;
 
-typedef	struct	s_stack
-{
-	struct s_node	*head;
-}							t_stack;
 
 //t_stack *mv_args_to_stack(int ac, char **av);
 int check_args(char **av);
@@ -36,15 +32,15 @@ int check_int(char *av);
 int check_overflows(long n);
 int check_doubles(char **av);
 int sort_args(int ac, char **av);
-int fill_stack(t_stack **A, int num);
-t_node	*lst_create(int num);
+int fill_stack(t_lst **A, int num);
+t_lst	*lst_create(int num);
 //void little_algo(char **av, t_stack *A, t_stack *B);
 //void sort_3(char **av, t_stack *A, t_stack *B);
 //void sort_5(char **av, int *stack_A, int *stack_B);
 //void sort_10(char **av, int *stack_A, int *stack_B);
-int *sa(t_stack *A);
-int *sb(t_stack *B);
+int *sa(t_lst *A);
+int *sb(t_lst *B);
 //int check_order(int *stack);
-void ss(t_stack *A, t_stack *B);
+void ss(t_lst *A, t_lst *B);
 
 #endif

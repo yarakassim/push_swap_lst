@@ -16,8 +16,7 @@ FILES 	=	main.c \
 			parse.c \
 			push_swap.c \
 			algo.c \
-			operators.c \
-			free.c
+			operators.c
 SRCS	=	$(addprefix srcs/, $(FILES))
 OBJS	=	$(SRCS:.c=.o)
 
