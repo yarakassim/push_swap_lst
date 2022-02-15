@@ -6,7 +6,7 @@
 /*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:50:12 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/11 23:25:12 by yarakassim       ###   ########.fr       */
+/*   Updated: 2022/02/15 23:46:11 by yarakassim       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int sort_args(int ac, char **av)
 		// 	return (0);
 		while (av[++i])
 		{
-			if (!fill_stack(&A, ft_atoi(av[i])))
+			if (!fill_stack(A, ft_atoi(av[i])))
 			{
-				free(A);
+				liberate(A);
 				return (0);
 			}
 		}
@@ -41,7 +41,7 @@ int sort_args(int ac, char **av)
 	return (1);
 }
 
-int	fill_stack(t_lst **A, int num)
+int	fill_stack(t_lst *A, int num)
 {
 	t_lst *tmp;
 	t_lst *end;
