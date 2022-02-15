@@ -6,7 +6,7 @@
 /*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:14:07 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/06 21:52:16 by yarakassim       ###   ########.fr       */
+/*   Updated: 2022/02/11 23:16:36 by yarakassim       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 typedef struct s_node
 {
 	int				element;
-	struct s_node 	*link;
+	struct s_node 	*next;
 }							t_node;
 
 typedef	struct	s_stack
@@ -36,7 +36,8 @@ int check_int(char *av);
 int check_overflows(long n);
 int check_doubles(char **av);
 int sort_args(int ac, char **av);
-void fill_stack(t_stack **A, int num);
+int fill_stack(t_stack **A, int num);
+t_node	*lst_create(int num);
 //void little_algo(char **av, t_stack *A, t_stack *B);
 //void sort_3(char **av, t_stack *A, t_stack *B);
 //void sort_5(char **av, int *stack_A, int *stack_B);
@@ -45,6 +46,5 @@ int *sa(t_stack *A);
 int *sb(t_stack *B);
 //int check_order(int *stack);
 void ss(t_stack *A, t_stack *B);
-void liberate(int n, t_stack *A, t_stack *B);
 
 #endif

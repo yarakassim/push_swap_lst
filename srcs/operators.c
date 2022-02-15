@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   operators.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 09:12:21 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/04 12:11:11 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/11 22:46:23 by yarakassim       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
+/*
 int *sa(t_stack *A)
 {
 	int tmp;
@@ -42,7 +42,7 @@ void	ss(t_stack *A, t_stack *B)
 {
 	A->stack = sa(A);
 	B->stack = sb(B);
-}
+}*/
 
 //t_stack *pa(t_stack *stack)
 
