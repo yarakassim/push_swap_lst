@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 11:51:19 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/16 13:07:39 by ykassim-         ###   ########.fr       */
+/*   Created: 2022/02/16 07:38:27 by ykassim-          #+#    #+#             */
+/*   Updated: 2022/02/16 08:10:59 by ykassim-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/push_swap.h"
 
-long	ft_atoi	(const char *str)
+void liberate(t_lst *stack_a)
 {
-	long	n;
-	int		i;
-	int		sign;
-
-	n = 0;
-	i = 0;
-	sign = 1;
-	if (str[i] == 45 || str[i] == 43)
+	while (stack_a->next != NULL)
 	{
-		if (str[i] == 45)
-			sign = -1;
-		i++;
+		free(stack_a);
+		stack_a = stack_a->next;
 	}
-	while (ft_isdigit(str[i]))
-	{
-		n = n * 10 + str[i] - 48;
-		i++;
-	}
-	return (n * sign);
 }

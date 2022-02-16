@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:50:12 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/15 23:46:11 by yarakassim       ###   ########.fr       */
+/*   Updated: 2022/02/16 15:05:01 by ykassim-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,30 @@
 int sort_args(int ac, char **av)
 {
 	int		i;
-	t_lst	*A;
+	t_lst	*stack_a;
 
 	i = 0;
-	A = NULL;
+	stack_a = NULL;
 	if (ac > 1)
 	{
-		// A = (t_lst *)malloc(sizeof(t_lst));
-		// if (!A)
-		// 	return (0);
 		while (av[++i])
 		{
-			if (!fill_stack(A, ft_atoi(av[i])))
+			if (!fill_stack(&stack_a, ft_atoi(av[i])))
 			{
-				liberate(A);
+				liberate(stack_a);
 				return (0);
 			}
 		}
-		//if (check_order)
+		if (check_order(stack_a))
+		{
+			liberate(stack_a);
+			return (0);
+		}
+		while (stack_a != NULL)
+		{
+			printf("%d\n", stack_a->element);
+			stack_a = stack_a->next;
+		}
 		/*if (A->counter < 12)
 			little_algo(av, A, B);
 		else
@@ -41,23 +47,22 @@ int sort_args(int ac, char **av)
 	return (1);
 }
 
-int	fill_stack(t_lst *A, int num)
+int	fill_stack(t_lst **stack_a, int num)
 {
-	t_lst *tmp;
+	t_lst *add;
 	t_lst *end;
-
-	if ((*A) == NULL)
-	{
-		(*A) = lst_create(num);
-	}
+	
+	add = lst_create(num);
+	if (add == NULL)
+		return (0);
+	if ((*stack_a) == NULL)
+		(*stack_a) = add;
 	else
 	{
-		tmp = (*A);
-		while ((*A)->next != NULL)
-			(*A) = (*A)->next;
-		end = lst_create(num);
-		(*A)->next = end;
-		(*A) = tmp;
+		end = *stack_a;
+		while (end->next != NULL)
+			end = end->next;
+		end->next = add;
 	}
 	return (1);
 }
@@ -66,7 +71,6 @@ t_lst	*lst_create(int num)
 {
 	t_lst	*new;
 
-	//write(0, "here\n", 5);
 	new = (t_lst *)malloc(sizeof(t_lst));
 	if (!new)
 		return (NULL);
@@ -75,4 +79,18 @@ t_lst	*lst_create(int num)
 	return (new);
 }
 
-//int check_order(int *stack)
+int check_order(t_lst *stack_a)
+{
+	t_lst	*save;
+	int		check;
+
+	save = stack_a;
+	while (save->next != NULL)
+	{
+		check = save->element;
+		if (check > save->next->element)
+			return (0); 
+		save = save->next;
+	}
+	return (1);
+}
