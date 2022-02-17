@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykassim- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 10:32:35 by ykassim-          #+#    #+#             */
-/*   Updated: 2021/06/02 08:27:50 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:56:30 by yarakassim       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy	(void *dst, const void *src, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
 	unsigned char	*d;
 	unsigned char	*s;

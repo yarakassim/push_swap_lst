@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 07:38:27 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/17 15:56:33 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:36:23 by yarakassim       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void liberate(t_lst **bye_stack)
+void	liberate(t_lst **bye_stack)
 {
 	t_lst	*tmp;
 

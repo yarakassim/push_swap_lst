@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+         #
+#    By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/02 11:00:05 by ykassim-          #+#    #+#              #
-#    Updated: 2022/02/17 12:48:52 by ykassim-         ###   ########.fr        #
+#    Updated: 2022/02/17 22:41:19 by yarakassim       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ PATH_LIBFT		= ./libft/
 PATH_INC			= ./includes/
 
 CC             =     gcc
-CFLAGS        =     -Wall -Wextra -Werror
+CFLAGS        =     -Wall -Wextra -Werror -g -fsanitize=address
 
 
 RM            =     rm -f

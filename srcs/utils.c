@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 10:20:19 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/17 12:22:10 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:35:04 by yarakassim       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_lst	*lst_create(int num)
 	return (new);
 }
 
-int check_order(t_lst *stack_a)
+int	check_order(t_lst *stack_a)
 {
 	t_lst	*save;
 	int		check;
@@ -34,7 +34,7 @@ int check_order(t_lst *stack_a)
 	{
 		check = save->element;
 		if (check > save->next->element)
-			return (0); 
+			return (0);
 		save = save->next;
 	}
 	return (1);
@@ -42,7 +42,7 @@ int check_order(t_lst *stack_a)
 
 int	get_stack_size(t_lst *stack)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (stack != NULL)

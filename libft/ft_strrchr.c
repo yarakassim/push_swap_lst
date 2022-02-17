@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykassim- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 17:47:50 by ykassim-          #+#    #+#             */
-/*   Updated: 2021/06/07 14:51:31 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:58:07 by yarakassim       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr	(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*str;
 	size_t	len;
