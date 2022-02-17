@@ -6,7 +6,7 @@
 /*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:14:07 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/17 12:37:25 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/17 16:52:05 by ykassim-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int			ft_isdigit2(char *av);
 int			check_order(t_lst *stack_a);
 int			get_stack_size(t_lst *stack);
 int			ready_set_sort(t_lst **stack_a, t_lst **stack_b);
-void		liberate(t_lst **stack_a);
+void		liberate(t_lst **bye_stack);
 void		swap(t_lst **the_stack, int stack_id);
 void 		rotate(t_lst **the_stack, int stack_id);
 void		reverse_rotate(t_lst **the_stack, int stack_id);
@@ -51,6 +51,7 @@ void		push_b(t_lst **stack_a, t_lst **stack_b);
 void		little_algo(t_lst **stack_a, t_lst **stack_b);
 void		sort_three(t_lst **stack_a);
 void		radix_sort(t_lst **stack_a, t_lst **stack_b);
+void		filter(t_lst *first, t_lst *second, t_lst *third, t_lst **stack_a);
 t_lst		*lst_create(int num);
 
 #endif

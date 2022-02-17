@@ -6,7 +6,7 @@
 /*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:50:12 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/17 13:48:45 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/17 17:28:21 by ykassim-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int sort_args(int ac, char **av)
 		}
 		if (!ready_set_sort(&stack_a, &stack_b))
 			return (0);
+		//if (stack_a)
 		liberate(&stack_a);
 		liberate(&stack_b);
 	}
@@ -90,7 +91,7 @@ int ready_set_sort(t_lst **stack_a, t_lst **stack_b)
 	if (check_order(*stack_a))
 		{
 			liberate(stack_a);
-			liberate(stack_b);
+			//liberate(stack_b);
 			return (0);
 		}
 	init_pos(*stack_a);

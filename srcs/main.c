@@ -6,13 +6,13 @@
 /*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:13:25 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/17 12:23:29 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/17 16:56:33 by ykassim-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	ac--;
 	if (!av[1])

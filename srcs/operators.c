@@ -6,13 +6,13 @@
 /*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 09:12:21 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/17 12:00:55 by ykassim-         ###   ########.fr       */
+/*   Updated: 2022/02/17 16:54:12 by ykassim-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void swap(t_lst **the_stack, int stack_id)
+void	swap(t_lst **the_stack, int stack_id)
 {
 	t_lst	*head;
 	t_lst	*second;
@@ -31,7 +31,7 @@ void swap(t_lst **the_stack, int stack_id)
 	}
 }
 
-void rotate(t_lst **the_stack, int stack_id)
+void	rotate(t_lst **the_stack, int stack_id)
 {
 	t_lst	*head;
 	t_lst	*last;
@@ -52,7 +52,7 @@ void rotate(t_lst **the_stack, int stack_id)
 	}
 }
 
-void reverse_rotate(t_lst **the_stack, int stack_id)
+void	reverse_rotate(t_lst **the_stack, int stack_id)
 {
 	t_lst	*head;
 	t_lst	*last;
@@ -60,11 +60,12 @@ void reverse_rotate(t_lst **the_stack, int stack_id)
 	if (get_stack_size(*the_stack) > 1)
 	{
 		head = *the_stack;
+		last = *the_stack;
+		while (last->next != NULL)
+			last = last->next;
 		while (head->next->next != NULL)
 			head = head->next;
 		head->next = NULL;
-		while (last->next != NULL)
-			last = last->next;
 		last->next = *the_stack;
 		*the_stack = last;
 		if (stack_id == 0)
@@ -74,7 +75,7 @@ void reverse_rotate(t_lst **the_stack, int stack_id)
 	}
 }
 
-void push_a(t_lst **stack_a, t_lst **stack_b)
+void	push_a(t_lst **stack_a, t_lst **stack_b)
 {
 	t_lst	*head_b;
 
@@ -88,7 +89,7 @@ void push_a(t_lst **stack_a, t_lst **stack_b)
 	}
 }
 
-void push_b(t_lst **stack_a, t_lst **stack_b)
+void	push_b(t_lst **stack_a, t_lst **stack_b)
 {
 	t_lst	*head_a;
 
