@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:13:25 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/17 23:14:02 by yarakassim       ###   ########.fr       */
+/*   Updated: 2022/02/18 11:23:50 by ykassim-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	main(int ac, char **av)
 {
+	int	ret;
+
 	ac--;
 	if (!av[1])
 		return (0);
@@ -22,10 +24,13 @@ int	main(int ac, char **av)
 		write(2, "Error\n", 6);
 		return (0);
 	}
-	if (!sort_args(ac, av))
+	ret = sort_args(ac, av);
+	if (ret == -1)
 	{
-		write(2, "sorry, unable to initialize stack\n", 35);
+		write(2, "Error\n", 6);
 		return (0);
 	}
+	if (ret == 0)
+		return (0);
 	return (0);
 }

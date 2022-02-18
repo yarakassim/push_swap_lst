@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yarakassim <yarakassim@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ykassim- <ykassim-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:50:12 by ykassim-          #+#    #+#             */
-/*   Updated: 2022/02/17 22:52:01 by yarakassim       ###   ########.fr       */
+/*   Updated: 2022/02/18 12:38:22 by ykassim-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	sort_args(int ac, char **av)
 			if (!fill_stack(&stack_a, ft_atoi(av[i])))
 			{
 				liberate(&stack_a);
-				return (0);
+				return (-1);
 			}
 		}
 		if (!ready_set_sort(&stack_a, &stack_b))
